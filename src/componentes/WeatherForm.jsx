@@ -1,15 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './estilos/weatherForm.css'
 
 //hooks
-import UseInformation from '../hooks/useInformation';
 
-const WeatherForm = () => {
+const WeatherForm = ({pais, ciudad, setPais, setCiudad, getWeather}) => {
 
-    const [ciudad, setCiudad] = useState('');
-    const [pais, setPais] = useState('');
-
-    const [ getWeather] = UseInformation(pais, ciudad);
 
     return (
         <div className="">
