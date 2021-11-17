@@ -15,6 +15,7 @@ const Inicio = () => {
     const {clima, getWeather} = useInformation(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=ae5c7e6662165e8c16bffea7b1b0d3f6&units=metric`)
 
 
+
     return (
         <>
             <div>
