@@ -2,10 +2,10 @@ import React from 'react';
 import { useContext } from 'react/cjs/react.development';
 
 //componentes
-import Card from './../../componentes/Card';
+import Card from '../../componentes/Card';
 
 // context
-import CardContext from './../../context/CardContext'
+import CardContext from '../../context/CardContext'
 
 
 const Detalles = () => {
