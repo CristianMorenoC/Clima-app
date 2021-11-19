@@ -1,10 +1,26 @@
 import React from 'react';
-// import Card from '../../componentes/Card';
+import { useContext } from 'react/cjs/react.development';
+
+//componentes
+import Card from './../../componentes/Card';
+
+// context
+import CardContext from './../../context/CardContext'
+
 
 const Detalles = () => {
 
+    const {cards} =useContext(CardContext);
+
     return (
-        <div>Aqui van los detalles</div>
+        <div className="flex w-screen">
+            {
+                cards && cards.length > 0 ?
+                cards.map(card => <Card  key={card.country} clima={card} />)
+                :
+                <h1 className="text-center w-full" >No hay información</h1>
+            }
+        </div>
     );
 }
 

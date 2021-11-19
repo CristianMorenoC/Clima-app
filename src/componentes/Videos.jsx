@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
+// import { useLocation } from 'react-router';
 
 const Videos = ({clima}) => {
+
+    // const {pathname} = useLocation();
 
     const [fuente, setFuente] = useState('')
 
@@ -23,17 +26,15 @@ const Videos = ({clima}) => {
             }
         }
         climaDescription(clima)
-        console.log( clima );
     }, [clima])
 
 
     return (
         fuente !== '' &&
         <div className="card__video">
-            <img src={require(`./../videos/${fuente}`).default} alt="clima" /><span className="card__video-span" > {clima.temperature}°C </span>
-            <span className="card__video-span-city"> {clima.city} </span>
+            <img src={require(`./../videos/${fuente}`).default} alt="clima" />
+            <span className="card__video-span" > {clima.temperature}°C </span>
         </div>
     );
 }
- 
 export default Videos;

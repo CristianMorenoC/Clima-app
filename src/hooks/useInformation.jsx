@@ -10,6 +10,7 @@ import {useState} from 'react';
         wind_speed: '',
         city: '',
         country: '',
+        id: '',
         error: null
     })
 
@@ -24,7 +25,8 @@ import {useState} from 'react';
                 humidity: responseJSON.main.humidity,
                 wind_speed: responseJSON.wind.speed,
                 city: responseJSON.name,
-                country: responseJSON.sys.country
+                country: responseJSON.sys.country,
+                id: responseJSON.id
             })
         }
 
