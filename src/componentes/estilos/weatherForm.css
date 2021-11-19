@@ -18,3 +18,14 @@
     background: white;
     color: rgba(143,186,215,1);
 }
+
+@media screen and (max-width: 600px) {
+    .contenedor-input{
+        width: 90%;
+    }
+
+    .boton-formulario{
+        width: 60%;
+    }
+
+}

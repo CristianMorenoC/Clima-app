@@ -13,7 +13,7 @@ const Detalles = () => {
     const {cards} = useContext(CardContext);
 
     return (
-        <div className="flex w-screen">
+        <div className="flex w-screen justify-center flex-wrap">
             {
                 cards && cards.length > 0 ?
                 cards.map(card => <Card  key={card.id} clima={card} />)
