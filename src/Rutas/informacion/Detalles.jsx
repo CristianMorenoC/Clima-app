@@ -10,7 +10,7 @@ import CardContext from '../../context/CardContext'
 
 const Detalles = () => {
 
-    const {cards} =useContext(CardContext);
+    const {cards} = useContext(CardContext);
 
     return (
         <div className="flex w-screen">
