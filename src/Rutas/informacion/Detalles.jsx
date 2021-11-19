@@ -16,7 +16,7 @@ const Detalles = () => {
         <div className="flex w-screen">
             {
                 cards && cards.length > 0 ?
-                cards.map(card => <Card  key={card.country} clima={card} />)
+                cards.map(card => <Card  key={card.id} clima={card} />)
                 :
                 <h1 className="text-center w-full" >No hay información</h1>
             }
