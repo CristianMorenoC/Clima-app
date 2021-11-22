@@ -27,23 +27,23 @@ const Card = ({clima}) => {
     }
 
     return (
-            <div className="card m-4">
+            <div className = "card m-4">
                 {
                     pathname === '/' ?
                     <>
-                        <Videos clima={clima} />
-                        <span className="card__video-span-city"> {clima.city} </span>
+                        <Videos clima = {clima} />
+                        <span className = "card__video-span-city"> {clima.city} </span>
                         <button className="card__button" onClick={addOrRemoveCard} ><FontAwesomeIcon icon={faPlusCircle} /></button>
                     </>
                     :
                     <>
                         <Videos clima={clima} />
-                        <span className="card__video-span-city">Ciudad: {clima.city} </span>
-                        <span className="card__video-span-city">Pais: {clima.country} </span>
-                        <span className="card__video-span-city">{clima.description} </span>
-                        <span className="card__video-span-city">Wind: {clima.wind_speed}km/h </span>
-                        <span className="card__video-span-city">Humidity: {clima.humidity} </span>
-                        <button className="card__button transform rotate-45" onClick={addOrRemoveCard} ><FontAwesomeIcon icon={faPlusCircle} /></button>
+                        <span className = "card__video-span-city">Ciudad: {clima.city} </span>
+                        <span className = "card__video-span-city">Pais: {clima.country} </span>
+                        <span className = "card__video-span-city">{clima.description} </span>
+                        <span className = "card__video-span-city">Wind: {clima.wind_speed}km/h </span>
+                        <span className = "card__video-span-city">Humidity: {clima.humidity} </span>
+                        <button className = "card__button transform rotate-45" onClick={addOrRemoveCard} ><FontAwesomeIcon icon={faPlusCircle} /></button>
                     </>
                 }
             </div>
