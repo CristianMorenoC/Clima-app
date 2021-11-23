@@ -17,12 +17,15 @@ import {useState} from 'react';
     })
 
         const getWeather = async (e) => {
-            try {
                 setError404(false)
                 e.preventDefault();
                 const API_CLIMA = url
                 const response = await fetch(API_CLIMA);
                 const responseJSON = await response.json();
+                console.log(typeof responseJSON.cod)
+                if(responseJSON.cod === '404'){
+                    setError404(true)
+                }else{
                 setClima({...clima,
                     temperature: responseJSON.main.temp,
                     description: responseJSON.weather[0].description,
@@ -32,14 +35,9 @@ import {useState} from 'react';
                     country: responseJSON.sys.country,
                     id: responseJSON.id
                 })
-            }
-            catch(error) {
-                if (error.response.status === 404){
-                    setError404(true);
                 }
-            }
         }
 
     return {clima, getWeather, error404};
 }
- 
+
