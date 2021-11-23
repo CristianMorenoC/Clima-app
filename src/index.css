@@ -29,14 +29,8 @@ body::before{
 
 .contenedor-rutas{
     position: relative;
-    min-height: 67vh;
+    min-height: 75vh;
     z-index: 100;
     margin-top: 20px;
-}
-
-@media screen and (max-width: 600px) {
-    .contenedor-rutas{
-        min-height: 75vh;
-    }
 }
 
